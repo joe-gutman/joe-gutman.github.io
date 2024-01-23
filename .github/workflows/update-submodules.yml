@@ -1,6 +1,7 @@
 name: update-all-submodules
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 */1 * *' # Runs at midnight every 2 days
 
