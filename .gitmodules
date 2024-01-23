@@ -1,0 +1,3 @@
+[submodule "projects/pyaimanager"]
+	path = projects/pyaimanager
+	url = https://github.com/joe-gutman/pyaimanager/
