@@ -1,0 +1,23 @@
+name: Update Submodules
+
+on:
+  schedule:
+    - cron: '0 0 */1 * *' # Runs at midnight every 2 days
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: true  # This checks out all submodules
+
+    - name: Update all submodules
+      run: |
+        git submodule update --remote
+        git config --global user.name 'joe-gutman'
+        git config --global user.email 'jddg5wa@gmail.com'
+        git commit -am "Update submodules"
+        git push
