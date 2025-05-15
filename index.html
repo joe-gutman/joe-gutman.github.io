@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Gutman | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/backgroundPattern.js" defer></script>
+    <script src="./scripts/transformUtils.js" defer></script>
+    <script src="./scripts/contactForm.js" defer></script>
+    <!-- <link rel="icon" href="./assets/icons/favicon.ico"> -->
+</head>
+<body>
+    <div class="background-pattern"></div>
+    <div class="content-container">
+        <header>
+            <div class="hero-header">
+                <h1>Joe Gutman</h1>
+                <div class="headline">
+                    <span class="medium-text">Developer</span> | 
+                    <span class="medium-text">Designer</span> | 
+                    <span class="medium-text">Computer Science Student</span>
+                </div>
+            </div>
+            <div class="contact-header">
+                <button class="contact-icon" title="Email Me" type="button">
+                    <img src="./assets/icons/envelope_black.svg" alt="Email"
+                        onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
+                        onmouseleave="resetRot(this); resetScale(this);"
+                        onmousedown="toggleContactModal();"
+                    >
+                </button>
+                <a target="_new" href="https://linkedin.com/in/joe-gutman" class="contact-icon" title="Check Out my LinkedIn Profile">
+                    <img src="./assets/icons/linkedin_black.svg" alt="LinkedIn"
+                        onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
+                        onmouseleave="resetRot(this); resetScale(this);"
+                    >
+                </a>
+                <a target="_new" href="https://github.com/joe-gutman" class="contact-icon" title="Check Out My Projects on GitHub">
+                    <img src="./assets/icons/github_black.svg" alt="GitHub"
+                        onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
+                        onmouseleave="resetRot(this); resetScale(this);"
+                    >
+                </a>
+            </div>
+        </header>
+        <hr>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! If you’re here, you’re probably looking to learn more about me. I’m Joe, a self-taught developer currently studying Computer Science at Western Governors University. My journey into tech actually started in graphic design and 3D modeling. I spent a lot of time building virtual experiences on platforms like Second Life. I loved making things people could actually use, but I always wanted to do more than just create static designs. I wanted them to be functional, to actually do something. So, I picked up coding to make that happen.</p>
+
+            <p>At first, I started by tearing apart small scripts, figuring out how they worked, and then using what I learned to build my own. It was addictive. Eventually, I stumbled upon MIT's free Intro to Computer Science course, which focused on Python. I figured, why not? It was self-paced and I could do it on my own time. That course was the first time I really understood how code could power real applications. Not just animations or graphics, but tools that could respond to user input and perform real tasks. That got me hooked, and I just kept going from there.</p>
+            
+            <p>As I kept building small projects and experimenting with new ideas, I realized frontend development was only part of the story. If I wanted to make things that really worked end-to-end, I needed to understand the backend too. I tried learning it on my own, but it was a whole different skill set. It wasn’t as visual as design or as immediate as frontend work. That’s when a friend told me about Hack Reactor. I applied, got accepted, and spent 12 weeks learning to build full-stack applications from scratch. I learned how to connect the frontend with the backend, handle data, and create fully functional applications. It was also my first real experience working with a team. Up until then, I had mostly worked solo. Sharing tasks, coordinating ideas, and solving problems together was new, but I found out I really enjoyed it. There’s something rewarding about building something as a group and watching it come together.</p>
+            
+            <p>Since then, I’ve been focused on building tools that people can actually use. My latest project is a voice-powered virtual assistant that helps manage everyday tasks through natural conversation. It’s built with Python, Flask, and Godot, and it’s designed to prioritize privacy with an offline-first SQL backend. I also led a team to build <strong>Tabletop Tracker</strong>, an app for managing board game collections. We even added an AI-powered recommendation system to help users find their next favorite game.</p>
+            
+            <p>I’m always working to learn more and build better things. I want to be part of a team that’s creating real solutions that people actually use. If that’s what you’re working on, I’d love to help make it happen.</p>
+            
+
+            
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/joe-gutman/personal-assistant-desktop-client">Personal Life Assistant</a> - AI-powered voice assistant built with Python, Flask, and Godot.</li>
+                <li><a href="https://github.com/Hey-Arnold-Incorporated/TableTop-Collection">Table Top Tracker</a> - Board Game Management App with React and Node.js.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div id="contact-modal">
+        <div class="contact-modal-content">
+            <div class="contact-modal-header">
+                <h2>Contact Me</h2>
+                <img class="close-modal" src="./assets/icons/close_black.svg" alt="Close Modal"
+                    onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
+                    onmouseleave="resetRot(this); resetScale(this);"
+                    onmousedown="toggleContactModal();"
+                >
+            </div>
+            <hr class="contact-modal-divider">
+            <form class="contact-modal-form" onsubmit="submitForm(event)" novalidate>
+                <div class="contact-modal-inputs">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="jane.smith@startup.com" required>
+                
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Inc.">
+                
+                    <label for="position">Position</label>
+                    <input type="text" id="position" name="position" placeholder="Creative Director">
+                
+                    <label for="message" class="message-label">Message</label>
+                    <textarea id="message" name="message" placeholder="Have an internship opportunity? Let’s connect." required></textarea>
+                </div>
+                <div class="contact-modal-footer">
+                    <button class="send-button" type="submit"
+                        onmouseenter="randRot(this, 10, 5); addScale(this, 1.05);"
+                        onmouseleave="resetRot(this); resetScale(this);">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="custom-alert-modal">
+        <div id="custom-alert-container">
+            <div id="custom-alert-header">
+                <img id="custom-alert-icon" src="./assets/icons/success_black.svg" alt="Success"
+                    onmouseenter="randRot(this, 10, 5); addScale(this, 1.05);"
+                    onmouseleave="resetRot(this); resetScale(this);"
+                >
+                <h2 id="custom-alert-status">Alert</h2>
+            </div>
+            <p id="custom-alert-message">Your message has been sent!</p>
+            <button id="custom-alert-close-button" type="button"
+                    onmouseenter="randRot(this, 10, 5); addScale(this, 1.05);"
+                    onmouseleave="resetRot(this); resetScale(this);"
+            >Okay</button>
+        </div>
+    </div>
+</body>
+</html>

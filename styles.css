@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('./assets/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+hr {
+    box-sizing: border-box;
+    height: 2px;
+    width: 95%;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 7px 7px 7px 7px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9BC9EC;
+    color: #333;
+}
+
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.noise-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5;
+}
+
+@keyframes wiggle-start {
+    0% { transform: rotate(var(--wiggle-start)); }
+    100% { transform: rotate(var(--wiggle-side)); }
+}
+
+@keyframes wiggle-loop {
+    0%   { transform: rotate(var(--wiggle-side-1)) scale(1); }
+    50%  { transform: rotate(var(--wiggle-start)) scale(1.025, 1.15); }
+    100% { transform: rotate(var(--wiggle-side-2)) scale(1); }
+}
+
+.pattern-icon {
+    filter: drop-shadow(0px 0px 50px #33668d);
+}
+
+.content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 100vh;
+    background-color: #ffffff;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Nunito';
+    margin: 0 30px;
+}
+
+.hero-header {
+    text-align: left;
+}
+
+.hero-header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+}
+
+.headline {
+    margin-left: .1rem;
+    margin-top: -0.5rem;
+    font-weight: 600;
+}
+
+.hero-header span {
+    font-weight: 600;
+    letter-spacing: 0.015rem;
+}
+
+.contact-header {
+    display: flex;
+    gap: 40px;
+    padding-top: 10px;
+    justify-content: center; 
+    align-items: center;
+    margin: 8px 0;
+}
+
+.contact-icon img {
+  width: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-icon {
+  all: unset;
+  cursor: pointer;
+}
+
+.contact-icon img:hover {
+    transform: scale(1.1);
+}
+
+section {
+    box-sizing: border-box;
+    margin: 0 25px 32px;
+    padding: 0 24px 4px;
+}
+
+/* section h2 {
+    margin-top: 0;
+    padding-top: 0;
+} */
+
+section#about {
+    margin-top: 25px;
+}
+
+section#about p{
+    text-indent: 2rem;
+}
+
+#contact-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out, visibility 0s linear 0.3s;
+}
+
+#contact-modal.show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-out;
+}
+
+.contact-modal-content {
+    background-color: #fff;
+    padding: 26px 36px 36px 36px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    border-radius: 1rem;
+    font-family: inherit;
+}
+
+.contact-modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact-modal-header h2 {
+    margin: 8px 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    width:  32px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.contact-modal-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+
+.contact-modal-inputs {
+    display: grid;
+    grid-template-columns: .5fr 4fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-modal-inputs label:not(.message-label) {
+    align-items: center;
+}
+
+.contact-modal-inputs label {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.contact-modal-inputs input,
+.contact-modal-inputs textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.contact-modal-inputs textarea {
+    resize: none;
+    height: 160px;
+}
+
+.contact-modal-footer {
+    text-align: right;
+}
+
+.send-button {
+    margin-right: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+
+#custom-alert-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-out, visibility 0s linear 0.3s;
+}
+
+#custom-alert-modal.show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-out;
+}
+
+#custom-alert-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 18px 36px 36px 36px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    border-radius: 1rem;
+    font-family: inherit;
+}
+
+#custom-alert-header {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+#custom-alert-icon {
+    width:  32px;
+}
+
+#custom-alert-header h2 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#custom-alert-message {
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
+    color: black;
+}
+
+#custom-alert-close-button {
+    margin: -8px auto 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+}
