@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="./scripts/fitty.min.js" defer></script>
     <script src="./components/section/script.js" defer></script>
+    <script src="./components/alert_modal/script.js" defer></script>
     <script src="./scripts/backgroundPattern.js" defer></script>
-    <script src="./scripts/transformUtils.js" defer></script>
+    <script src="./scripts/contactForm.js" defer></script>
     <script src="./scripts/textStyling.js" defer></script>
 </head>
 <body>
@@ -15,27 +16,40 @@
         <div class="background-pattern"></div>
         <div class="content-container">
             <div id="profile-sections"></div>
-            <div class="title">
+            <div class="title call-to-action">
                 <h1 class="fit">I'M LOOKING FOR</h1>
                 <h1 class="fit">AN INTERNSHIP...</h1>
-                <h1 class="fit" id="call-to-action">LET'S CHAT!</h1>
+                <h1 class="fit">LET'S CHAT!</h1>
             </div>
-            <form class="contact-form" onsubmit="submitForm(event)" novalidate>
+            <form id="contact-form" class="contact-form" onsubmit="submitForm(event)" novalidate>
+
+            <div class="input-wrapper">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-            
+            </div>
+
+            <div class="input-wrapper">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="jane.smith@startup.com" required>
-            
+            </div>
+
+            <div class="input-wrapper">
                 <label for="company">Company:</label>
                 <input type="text" id="company" name="company" placeholder="Acme Inc.">
-            
+            </div>
+
+            <div class="input-wrapper">
                 <label for="position">Position:</label>
                 <input type="text" id="position" name="position" placeholder="Creative Director">
-            
+            </div>
+
+            <div class="input-wrapper">
                 <label for="message" class="message-label">Message:</label>
                 <textarea id="message" name="message" placeholder="Have an internship opportunity? Let’s connect." required></textarea>
+            </div>
+
             </form>
+            <button class="submit-button" form="contact-form" type="submit">Submit</button>
         </div>
     </div>
 </body>

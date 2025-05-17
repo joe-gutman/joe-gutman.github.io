@@ -29,7 +29,9 @@ async function renderList() {
                 if (itemType === 'text') {
                     const itemElement = await loadTemplate('./components/section/item-text.html');
                     itemElement.querySelector('.item-title').textContent = item.title;
-                    itemElement.querySelector('.item-description').textContent = item.description;
+                    itemElement.querySelector('.item-description').
+                    
+                    textContent = item.description;
                     sectionContainer.appendChild(itemElement);
 
                 } else if (itemType === 'project') {
