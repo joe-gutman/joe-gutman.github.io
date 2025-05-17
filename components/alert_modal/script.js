@@ -25,8 +25,19 @@ async function showAlertModal(statusText, messageText) {
         multiLine: true
     });
 
+    
     // Handle close
     alertClose.onclick = () => {
-        alertModal.remove();
+        // Remove the 'show' class to start fade-out
+        alertModal.classList.remove('show');
+
+        // Wait for the transition to complete before removing
+        alertModal.addEventListener('transitionend', () => {
+            alertModal.remove();
+        }, { once: true });
     };
+
+    requestAnimationFrame(() => {
+        alertModal.classList.add('show');
+    });
 }

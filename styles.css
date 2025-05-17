@@ -260,6 +260,12 @@ p.item-description {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alert-modal.show {
+    opacity: 1;
 }
 
 .alert-content {
