@@ -13,7 +13,12 @@ async function renderList() {
 
         const container = document.getElementById('profile-sections');
 
+        let sectionRenderCount = 0;
+
         for (const section of sections) {
+            sectionRenderCount++;
+            console.log(`Rendering section #${sectionRenderCount}:`, section.title);
+            
             const sectionContainer = await loadTemplate('./components/section/section.html');
             sectionContainer.querySelector('.section-title').textContent = section.title;
 
@@ -47,17 +52,15 @@ async function renderList() {
 
 function showDescription(event) {
   const item = event.target.closest('.section-item');
-    
+  if (!item) return;
 
-  if (item) {
-    const description = item.querySelector('.item-description');
-    console.log('Description:', description);
+  const description = item.querySelector('.item-description-container');
+  if (!description) return;
 
-    if (description) {
-      description.classList.toggle('visible');
-    }
-  }
+  description.classList.toggle('visible');
 }
 
-document.addEventListener('DOMContentLoaded', renderList);
+document.addEventListener('DOMContentLoaded', event => {
+    console.log("page loaded")
+});
 document.addEventListener('click', showDescription);
