@@ -5,6 +5,11 @@
     font-weight: 900;
 }
 
+.fitty-text {
+    white-space: normal !important;
+    display: block !important;
+}
+
 input:-webkit-autofill,
 textarea:-webkit-autofill {
   box-shadow: 0 0 0 1000px #EAEAEA inset;
@@ -65,7 +70,7 @@ body {
 
 .content-container {
     position: relative;
-    width: 1200px;
+    max-width: 1200px;
     background-color: white;
     margin: 0 auto;
     padding: 0 50px 100px;
@@ -102,7 +107,6 @@ section:first-of-type > .title {
     font-size: 5rem;
 }
 
-
 .item-title:hover {
     color: #FAA548;
     cursor: pointer;
@@ -115,21 +119,41 @@ section:first-of-type > .title {
     margin: 0;
     opacity: 0;
     transition: 
-        padding 0.75s ease-in-out, 
-        max-height 0.75s ease-in-out,
-        opacity 0.75s ease-in-out;
+        padding 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+        max-height 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+        opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .item-description-container.visible {
     max-height: 1000px;
     opacity: 1;
-    padding: 40px 45px 50px;
+    padding: 40px 45px 45px;
+}
+
+.section-item:last-of-type .item-description-container.visible {
+    padding-bottom: 0px;
 }
 
 p.item-description {
     margin: 0;
     padding: 0;
     font-size: 3rem;
+}
+
+p.item-description a {
+    color: #FAA548;
+    cursor: pointer;
+    text-decoration: none;
+    float: right;
+    padding-right: 15px;
+}
+
+.section-item .item-description a {
+    padding: 45px 0 0 0;
+}
+
+.section-item:last-of-type .item-description a {
+    padding: 45px 0 0;
 }
 
 .call-to-action {
@@ -236,7 +260,7 @@ p.item-description {
     padding: 0 5px;
     cursor: pointer;
     font-family: 'Nunito';
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     background: none;
     outline: none;
     border: none; 
@@ -303,7 +327,7 @@ p.item-description {
 .alert-close {
     font-family: 'Nunito';
     padding: 12px 30px;
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     color: #2C4A6E;
     border: none;
     font-weight: 900;
@@ -313,4 +337,42 @@ p.item-description {
 
 .alert-close:hover {
     color: #FAA548;
+}
+
+@media (max-width: 1300px) {
+    .content-container {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .title:not(first-of-type) {
+        margin: 3vw 0 0 0;
+    }
+
+    .item-title,
+    .input-wrapper label {
+        font-size: clamp(2rem, 6vw, 5rem);
+    }
+
+    .alert-modal-container {
+        width: 80%;
+    }   
+
+    .title.call-to-action h1 {
+        
+    }
+}
+
+@media (max-width: 1000px) {
+    .call-to-action {
+        margin-top: 5px;
+    }
+    
+    .call-to-action h1:nth-child(2) {
+        margin-top: -20px;
+    }
+    
+    .call-to-action h1:nth-child(3) {
+        margin-top: -30px;
+    }
 }

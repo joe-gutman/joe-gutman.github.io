@@ -16,8 +16,10 @@ async function submitForm(event) {
         }
     });
 
+    const missingFieldsText = `<span style="color:#FAA548"> ${missingFields.join('</span>, <span style="color:#FAA548">')}</span>`;
+
     if (!isValid) {
-        showAlertModal("ERROR: MISSING REQUIRED FIELDS", `Please fill out all missing fields: ${missingFields.join(', ')}. Then submit again.`);
+        showAlertModal("ERROR: MISSING REQUIRED FIELDS", `Please fill out all missing fields: ${missingFieldsText}. Then submit again.`);
         return;
     }
 

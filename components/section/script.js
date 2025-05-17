@@ -20,7 +20,7 @@ async function renderList() {
             console.log(`Rendering section #${sectionRenderCount}:`, section.title);
             
             const sectionContainer = await loadTemplate('./components/section/section.html');
-            sectionContainer.querySelector('.section-title').textContent = section.title;
+            sectionContainer.querySelector('.section-title').innerHTML = section.title;
 
 
             for (const item of section.items) {
@@ -28,16 +28,16 @@ async function renderList() {
 
                 if (itemType === 'text') {
                     const itemElement = await loadTemplate('./components/section/item-text.html');
-                    itemElement.querySelector('.item-title').textContent = item.title;
+                    itemElement.querySelector('.item-title').innerHTML = item.title;
                     itemElement.querySelector('.item-description').
                     
-                    textContent = item.description;
+                    innerHTML = item.description;
                     sectionContainer.appendChild(itemElement);
 
                 } else if (itemType === 'project') {
                     const itemElement = await loadTemplate('./components/section/item-project.html');
-                    itemElement.querySelector('.item-title').textContent = item.title;
-                    itemElement.querySelector('.item-description').textContent = item.description;
+                    itemElement.querySelector('.item-title').innerHTML = item.title;
+                    itemElement.querySelector('.item-description').innerHTML = item.description;
                     sectionContainer.appendChild(itemElement);
                 }
 
