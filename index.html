@@ -5,137 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe Gutman | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./components/section/script.js" defer></script>
     <script src="./scripts/backgroundPattern.js" defer></script>
     <script src="./scripts/transformUtils.js" defer></script>
-    <script src="./scripts/contactForm.js" defer></script>
-    <!-- <link rel="icon" href="./assets/icons/favicon.ico"> -->
+    <script src="./scripts/textStyling.js" defer></script>
+    <script src="./scripts/fitty.min.js" defer></script>
 </head>
 <body>
-    <div class="background-pattern"></div>
-    <div class="content-container">
-        <header>
-            <div class="hero-header">
-                <h1>Joe Gutman</h1>
-                <div class="headline">
-                    <span class="medium-text">Developer</span> | 
-                    <span class="medium-text">Designer</span> | 
-                    <span class="medium-text">Computer Science Student</span>
-                </div>
+    <div class="full-container">
+        <div class="background-pattern"></div>
+        <div class="content-container">
+            <div id="profile-sections"></div>
+            <div class="title">
+                <h1 class="fit">I'M LOOKING FOR</h1>
+                <h1 class="fit">AN INTERNSHIP...</h1>
+                <h1 class="fit" id="call-to-action">LET'S CHAT!</h1>
             </div>
-            <div class="contact-header">
-                <button class="contact-icon" title="Email Me" type="button">
-                    <img src="./assets/icons/envelope_black.svg" alt="Email"
-                        onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
-                        onmouseleave="resetRot(this); resetScale(this);"
-                        onmousedown="toggleContactModal();"
-                    >
-                </button>
-                <a target="_new" href="https://linkedin.com/in/joe-gutman" class="contact-icon" title="Check Out my LinkedIn Profile">
-                    <img src="./assets/icons/linkedin_black.svg" alt="LinkedIn"
-                        onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
-                        onmouseleave="resetRot(this); resetScale(this);"
-                    >
-                </a>
-                <a target="_new" href="https://github.com/joe-gutman" class="contact-icon" title="Check Out My Projects on GitHub">
-                    <img src="./assets/icons/github_black.svg" alt="GitHub"
-                        onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
-                        onmouseleave="resetRot(this); resetScale(this);"
-                    >
-                </a>
-            </div>
-        </header>
-        <hr>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hey, I'm Joe. I'm a self-taught programmer and designer, currently working on a Computer Science degree at Western Governors University. You might be wondering how I can be self-taught and still go to school. My interest in programming began years ago-back when I honestly didn’t think I was smart enough to be a programmer. But I had a goal that pushed me past those self-imposed limits: I wanted to make my designs interactive.
-              </p>
-            <p>
-                At first, I was just tearing apart scripts and mashing them together to get things working. Turns out, I really enjoyed it, so I started taking it more seriously. Over the years, I worked through a bunch of free online courses and eventually ended up in Hack Reactor's bootcamp. I went in wanting to learn full-stack development, and I came out with those skills, and a lot more. I learned to work closely with a great group of developers and even led a team of eight to build a mobile app for our final project.
-            </p>
-            <p>
-                The bootcamp made me realize I wanted to take programming even further, so I decided to formalize my learning with a degree at WGU. Now, I'm a junior developer looking for an internship while I finish school. If you’re looking for a motivated junior developer who’s always ready to learn and improve, I’d be happy to chat!
-            </p>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <img src="assets/icons/github_black.svg" class="project-icon" alt="GitHub" title="GitHub">
-                        <h4>Personal Assistant</h4>
-                    </div>
-                    <div class="project-description">
-                        <p>A personal assistant with AI integration for natural conversation command handling and voice recognition.</p>
-
-                        <p>This project was built with a Python, Flask backend server and desktop client built in godot.</p>
-                    </div>
-                    <div class="project-images">
-                        <!-- insert images/gifs here - the images can be examples or real images -->
-                    </div>
-            </div>
-            <ul>
-                <li><a href="https://github.com/joe-gutman/personal-assistant-desktop-client">Personal Life Assistant</a> - AI-powered voice assistant built with Python, Flask, and Godot.</li>
-                <li><a href="https://github.com/Hey-Arnold-Incorporated/TableTop-Collection">Table Top Tracker</a> - Board Game Management App with React and Node.js.</li>
-            </ul>
-        </section>
-    </div>
-
-    <div id="contact-modal">
-        <div class="contact-modal-content">
-            <div class="contact-modal-header">
-                <h2>Contact Me</h2>
-                <img class="close-modal" src="./assets/icons/close_black.svg" alt="Close Modal"
-                    onmouseenter="randRot(this, 15, 5); addScale(this, 1.15);"
-                    onmouseleave="resetRot(this); resetScale(this);"
-                    onmousedown="toggleContactModal();"
-                >
-            </div>
-            <hr class="contact-modal-divider">
-            <form class="contact-modal-form" onsubmit="submitForm(event)" novalidate>
-                <div class="contact-modal-inputs">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-                
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="jane.smith@startup.com" required>
-                
-                    <label for="company">Company</label>
-                    <input type="text" id="company" name="company" placeholder="Acme Inc.">
-                
-                    <label for="position">Position</label>
-                    <input type="text" id="position" name="position" placeholder="Creative Director">
-                
-                    <label for="message" class="message-label">Message</label>
-                    <textarea id="message" name="message" placeholder="Have an internship opportunity? Let’s connect." required></textarea>
-                </div>
-                <div class="contact-modal-footer">
-                    <button class="send-button" type="submit"
-                        onmouseenter="randRot(this, 10, 5); addScale(this, 1.05);"
-                        onmouseleave="resetRot(this); resetScale(this);">
-                        Send
-                    </button>
-                </div>
+            <form class="contact-form" onsubmit="submitForm(event)" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="jane.smith@startup.com" required>
+            
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" placeholder="Acme Inc.">
+            
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" placeholder="Creative Director">
+            
+                <label for="message" class="message-label">Message:</label>
+                <textarea id="message" name="message" placeholder="Have an internship opportunity? Let’s connect." required></textarea>
             </form>
-        </div>
-    </div>
-
-    <div id="custom-alert-modal">
-        <div id="custom-alert-container">
-            <div id="custom-alert-header">
-                <img id="custom-alert-icon" src="./assets/icons/success_black.svg" alt="Success"
-                    onmouseenter="randRot(this, 10, 5); addScale(this, 1.05);"
-                    onmouseleave="resetRot(this); resetScale(this);"
-                >
-                <h2 id="custom-alert-status">Alert</h2>
-            </div>
-            <p id="custom-alert-message">Your message has been sent!</p>
-            <button id="custom-alert-close-button" type="button"
-                    onmouseenter="randRot(this, 10, 5); addScale(this, 1.05);"
-                    onmouseleave="resetRot(this); resetScale(this);"
-            >Okay</button>
         </div>
     </div>
 </body>

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "HI, I'M JOE!",
+    "items": [
+      { "title": "Software Developer", "description": "Building things that work well and look good.", "type": "text" },
+      { "title": "Graphic Designer", "description": "Solving problems visually and with intention.", "type": "text" },
+      { "title": "Computer Science Student", "description": "Still learning. Always experimenting.", "type": "text" },
+      { "title": "Disc Golf Enjoyer", "description": "Low-cost therapy and high-stakes putting.", "type": "text" },
+      { "title": "AI Enthusiast", "description": "Exploring what’s possible with machine learning.", "type": "text" },
+      { "title": "Creative Problem Solver", "description": "Tackling challenges with curiosity and caffeine.", "type": "text" },
+      { "title": "User Focused Creator", "description": "Design and dev decisions start with empathy.", "type": "text" },
+      { "title": "Collaborative Builder", "description": "Best ideas are built together.", "type": "text" },
+      { "title": "Forever in Beta", "description": "I’m a project, not a product.", "type": "text" }
+    ]
+  },
+  {
+    "title": "I'M WORKING ON",
+    "items": [
+      { "title": "Personal Life Assistant", "description": "An AI-powered productivity tool tailored to my day-to-day.", "type": "project" },
+      { "title": "Skiing Video Game", "description": "Low-poly style, high-speed vibes.", "type": "project" }
+    ]
+  },
+  {
+    "title": "I'VE WORKED ON",
+    "items": [
+      { "title": "Table Top Tracker", "description": "An app to manage and share board game collections.", "type": "project" }
+    ]
+  }
+]

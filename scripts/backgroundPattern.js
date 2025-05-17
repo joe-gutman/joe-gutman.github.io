@@ -60,8 +60,8 @@ function placeRandom(images, elements, iconMinSize, iconMaxSize, jitter, gap, ma
                 icon.src = randomImage;
                 icon.style.cssText = `
                     position: absolute;
-                    left: ${finalX}px;
                     top: ${finalY}px;
+                    left: ${finalX}px;
                     width: ${iconSize}px;
                     height: ${iconSize}px;
                     opacity: ${opacity};
@@ -79,35 +79,6 @@ function placeRandom(images, elements, iconMinSize, iconMaxSize, jitter, gap, ma
         }
         overflowContainer.appendChild(fragment);
         element.prepend(overflowContainer);
-    });
-}
-
-function backgroundNubs(elements) {
-    Array.from(elements).forEach(element => {
-        const oldContainers = element.querySelectorAll(`.pattern-nub-container`);
-        Array.from(oldContainers).forEach(container => container.remove());
-
-        const nubsContainer = document.createElement('div');
-        nubsContainer.classList.add('pattern-nub-container');
-
-        const width = element.clientWidth;
-        const height = element.clientHeight;
-
-        const backgroundWidth = 600;
-        const backgroundHeight = 600
-        nubsContainer.style.cssText = `
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: ${width}px;
-            height: ${height}px;
-            background-image: url(assets/background_pattern/nubs/nubs_pattern.svg);
-            background-size: ${backgroundWidth}px ${backgroundHeight}px;
-            background-repeat: repeat;
-            opacity: 0.2;
-            `
-
-        element.prepend(nubsContainer);
     });
 }
 
@@ -195,10 +166,8 @@ function backgroundNoise(elements) {
         // Create a container div if needed
         const noiseContainer = document.createElement('div');
         noiseContainer.classList.add('noise-container');
+        noiseContainer.classList.add('pattern-container');
         noiseContainer.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
             width: ${width}px;
             height: ${height}px;
             pointer-events: none;
@@ -206,8 +175,6 @@ function backgroundNoise(elements) {
             background-repeat: repeat;
             background-size: auto;
             mix-blend-mode: overlay;
-            opacity: 0.1;
-            z-index: 0;
         `;
 
         element.prepend(noiseContainer);
@@ -219,9 +186,9 @@ function createBackgroundPattern() {
     const elements = document.getElementsByClassName('background-pattern');
 
     backgroundNoise(elements);
-    backgroundIcons(elements);
+    // backgroundIcons(elements);
     backgroundBlobs(elements);
-    backgroundNubs(elements);
+    // backgroundNubs(elements);
 }
 
 document.removeEventListener('mouseenter', handleWiggle, true);
