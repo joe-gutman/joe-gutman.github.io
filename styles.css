@@ -95,7 +95,9 @@ section:first-of-type>.title {
     border-radius: 0;
 }
 
-.item-title:hover {
+.item-title:hover,
+.item-title:active,
+.item-title:focus {
     color: #FAA548;
 }
 
@@ -214,7 +216,9 @@ p.item-description {
     border: none;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.submit-button:active,
+.submit-button:focus {
     color: #FAA548;
 }
 
@@ -273,6 +277,8 @@ p.item-description {
     cursor: pointer;
 }
 
-.alert-close:hover {
+.alert-close:hover,
+.alert-close:active,
+.alert-close:focus {
     color: #FAA548;
 }
