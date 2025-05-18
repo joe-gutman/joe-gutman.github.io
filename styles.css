@@ -17,11 +17,11 @@ textarea:-webkit-autofill {
 }
 
 .contact-form input,
-contact-form textarea,
+.contact-form textarea,
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   font-family: 'Nunito'; 
-  font-size: 1.5rem;
+  font-size: 32px;
 }
 
 h1, h2 {
@@ -231,7 +231,7 @@ p.item-description a {
     border: 0;
     background-color: #EAEAEA;
     margin: 10px 20px 10px 0;
-    font-size: 2rem;
+    font-size: 32px;
     padding: 25px;
     resize: none;
     outline: none;
