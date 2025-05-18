@@ -4,17 +4,17 @@
         "items": [
             {
                 "title": "Software Developer",
-                "description": "I like making things that work well and feel like they were made for someone — not just deployed. Whether it's a browser-based game or a custom AI assistant, I build tools that are meant to be used, not just looked at.",
+                "description": "I like making things that work well, help solve a problem, and are fun to use. Whether it's a fun little video game or a custom AI assistant, I build things that are meant to be used, not just looked at.",
                 "type": "text"
             },
             {
                 "title": "Graphic Designer",
-                "description": "My background is in design — 3D modeling, texture work, interface design. That’s where I learned to solve problems visually and care about how things feel, not just how they function.",
+                "description": "My background is in design: graphic design, 3D modeling, texture work, interface design. That’s how I learned to solve problems visually and care about how things feel, not just how they function.",
                 "type": "text"
             },
             {
                 "title": "Computer Science Student",
-                "description": "Currently at WGU, filling in the gaps. I’ve always been self-taught, but I wanted to formalize my learning and challenge myself with real computer science. Looking for a software development internship while I study.",
+                "description": "Currently at WGU, filling in my knowledge gaps. I’ve always been self-taught but I wanted to formalize my learning and push myself even farther. Looking for a software development internship while I study.",
                 "type": "text"
             },
             {
@@ -39,12 +39,12 @@
             },
             {
                 "title": "Collaborative Builder",
-                "description": "I’ve worked solo and with teams. I like both, but I’ve learned that a lot more is possible when you are working together. Plus, struggling through the bugs with someone else is way more fun.",
+                "description": "I’ve worked solo and with teams. I like both, but I’ve learned that a lot more is possible when you are working together. Plus, struggling on bugs together is more fun, and easier, than struggling alone.",
                 "type": "text"
             },
             {
-                "title": "Forever in Beta",
-                "description": "This is how I live my life. I'm always working on something, learning, and improving who I am. Learning is never done and so I am never done learning.",
+                "title": "Forever in Progress",
+                "description": "This is how I live my life. I never want to stop learning and being a better version of myself. There's always something new to learn, something new to try, and something new to build. I'm always in progress.",
                 "type": "text"
             }
         ]
@@ -58,7 +58,7 @@
             },
             {
                 "title": "Skiing Video Game",
-                "description": "Building a simple video game as a learning experience. An homage to a game I remember playing fondly as a kid, Ski Free. Adding my own twist on the gameplay and design to make it my own. <br> <a href='https://github.com/joe-gutman/skiing-video-game'>Check it out on GitHub</a>",
+                "description": "Building a simple video game as a dive into game developement. Crafting an homage to a game I remember playing fondly as a kid, Ski Free by Chris Pirih. Adding my own twist on the gameplay and design to make it my own. <br> <a href='https://github.com/joe-gutman/skiing-video-game'>Check it out on GitHub</a>",
                 "type": "project"
             }
         ]
@@ -68,7 +68,7 @@
         "items": [
             {
                 "title": "Table Top Tracker",
-                "description": "A full-stack app for organizing board game collections and getting AI-powered game recommendations. I led the team of eight, including myself, coordinated front-end and back-end development, and helped guide the UX from idea to implementation. <br> <a href='https://github.com/joe-gutman/table-top-tracker'>Check it out on GitHub</a>",
+                "description": "A student group project during my time in the Hack Reactor bootcamp. We built a full-stack app for organizing board game collections and getting AI-powered game recommendations. I led the team of eight of us, coordinated front-end and back-end development, and helped guide the UX from idea to implementation. <br> <a href='https://github.com/joe-gutman/table-top-tracker'>Check it out on GitHub</a>",
                 "type": "project"
             }
         ]
