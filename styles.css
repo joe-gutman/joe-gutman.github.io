@@ -104,7 +104,7 @@ section:first-of-type>.title {
 .item-description-container {
     max-height: 0;
     overflow: hidden;
-    padding: 0 clamp(15px, 5vw, 45px);
+    padding: 0 clamp(10px, 4vw, 45px);
     margin: 0;
     opacity: 0;
     transition:
