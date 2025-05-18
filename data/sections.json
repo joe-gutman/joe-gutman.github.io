@@ -24,7 +24,7 @@
             },
             {
                 "title": "AI Enthusiast",
-                "description": "I'm experimenting with ai, voice interfaces, and personal tooling. I don't chase trends, but to see what useful systems I can build for myself and others.",
+                "description": "I'm experimenting with ai, voice interfaces, and personal tooling. There's so much potential and I am working hard to see what useful systems I can build for myself and others. ",
                 "type": "text"
             },
             {
@@ -34,7 +34,7 @@
             },
             {
                 "title": "User Focused Creator",
-                "description": "I care about how things feel to use. Design and code aren’t separate for me. While I believe in the concept of 'form follows function' I also believe that form is just as important as function. What good is a program if the user doesn't want to use it?",
+                "description": "I care about how things feel to use. Design and code aren’t separate for me. While I believe in the concept of 'form follows function' I also believe that form is just as important as function. What good is a toll if a user doesn't want to use it?",
                 "type": "text"
             },
             {
@@ -53,12 +53,12 @@
         "title": "I'M WORKING ON",
         "items": [{
                 "title": "Personal Life Assistant",
-                "description": "A voice powered personal assistant that helps you manage your tasks and schedules. It runs locally, handles task management, and connects to my other tools. Built with Python, Flask, and Godot, and designed with privacy in mind.<br> <a href='https://github.com/joe-gutman/personal-life-assistant'>Check it out on GitHub</a>",
+                "description": "A voice powered personal assistant that helps you manage your tasks and schedules. It runs locally, handles task management, and connects to my other tools. Built with Python, Flask, and Godot, and designed with privacy in mind.<br> <a href='https://github.com/joe-gutman/personal-assistant-desktop-server'>Check it out on GitHub</a>",
                 "type": "project"
             },
             {
                 "title": "Skiing Video Game",
-                "description": "Low-poly visuals. High-speed vibes. Built in Godot with tight controls and just enough jank to keep it interesting. This one’s about making something fun, weird, and playable. <br> <a href='https://github.com/joe-gutman/personal-life-assistant'>Check it out on GitHub</a>",
+                "description": "Building a simple video game as a learning experience. An homage to a game I remember playing fondly as a kid, Ski Free. Adding my own twist on the gameplay and design to make it my own. <br> <a href='https://github.com/joe-gutman/skiing-video-game'>Check it out on GitHub</a>",
                 "type": "project"
             }
         ]
@@ -68,7 +68,7 @@
         "items": [
             {
                 "title": "Table Top Tracker",
-                "description": "A full-stack app for organizing board game collections and getting AI-powered game recommendations. I led the team of eight, coordinated front-end and back-end development, and helped guide the UX from idea to implementation. <br> <a href='https://github.com/joe-gutman/personal-life-assistant'>Check it out on GitHub</a>",
+                "description": "A full-stack app for organizing board game collections and getting AI-powered game recommendations. I led the team of eight, including myself, coordinated front-end and back-end development, and helped guide the UX from idea to implementation. <br> <a href='https://github.com/joe-gutman/table-top-tracker'>Check it out on GitHub</a>",
                 "type": "project"
             }
         ]
