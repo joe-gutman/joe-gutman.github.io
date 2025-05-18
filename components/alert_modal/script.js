@@ -20,10 +20,7 @@ async function showAlertModal(statusText, messageText) {
     alertStatus.innerHTML = statusText;
     alertMessage.innerHTML = messageText;
 
-    fitty('.fit', {
-        minSize: 40,
-        multiLine: true
-    });
+    fitty('.fitty-title');
 
     
     // Handle close

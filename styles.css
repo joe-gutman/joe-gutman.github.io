@@ -301,6 +301,7 @@ p.item-description a {
     padding: 80px 80px 50px;
     border-radius: 20px;
     width: 75%;
+    max-height: 400px;
     max-width: 1000px;
     text-align: center;
 }
