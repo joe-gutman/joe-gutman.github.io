@@ -359,8 +359,8 @@ p.item-description a {
         width: 80%;
     }   
 
-    .title.call-to-action h1 {
-        
+    text-area {
+        font-size: 32px;
     }
 }
 
@@ -375,5 +375,9 @@ p.item-description a {
     
     .call-to-action h1:nth-child(3) {
         margin-top: -30px;
+    }
+
+    .contact-form textarea {
+        font-size: 32px;
     }
 }
