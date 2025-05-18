@@ -67,7 +67,7 @@ textarea:-webkit-autofill {
     width: 100%;
     background-color: #fff;
     margin: 0 auto;
-    padding: 0 clamp(20px, 5vw, 50px) clamp(50px, 10vw, 100px);
+    padding: 0 clamp(20px, 5vw, 50px) clamp(25px, 10vw, 50px);
 }
 
 .section-title {
@@ -135,7 +135,7 @@ p.item-description {
 }
 
 .title.call-to-action {
-    margin-bottom: 0;
+    margin: clamp(10px, 4vw, 45px) 0 0 0;
 }
 
 .call-to-action {
@@ -163,7 +163,6 @@ p.item-description {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 clamp(5px, 2vw, 10px);
 }
 
 .input-wrapper label {
@@ -200,16 +199,15 @@ p.item-description {
 .submit-container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: stretch;
 }
 
 .submit-button {
     font-family: 'Nunito';
     font-size: clamp(1.5rem, 5vw, 5rem);
-    float: right;
-    padding: 10px 5px;
-    height: 70px;
+    right: 0px;
+    padding: clamp(5px, 6vw, 30px) 0 clamp(5px, 6vw, 20px) 0; 
     cursor: pointer;
     color: #2C4A6E;
     background: none;
@@ -219,6 +217,33 @@ p.item-description {
 .submit-button:hover,
 .submit-button:active,
 .submit-button:focus {
+    color: #FAA548;
+}
+
+.resume-section {
+    padding-top: 0;
+    box-sizing: border-box;
+    display:flex;
+    width: 100%;
+}
+
+.resume-link a {
+    text-decoration: none;
+}
+
+.resume-link {
+    text-decoration: none;
+    color: #2C4A6E;
+}
+
+.resume-link span {
+    text-decoration: underline clamp(2px, 5vw, 5px) ;
+    color: #2C4A6E;
+}
+
+.resume:hover,
+.resume:active,
+.resume:focus {
     color: #FAA548;
 }
 
