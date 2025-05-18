@@ -38,19 +38,19 @@ async function submitForm(event) {
 
     
         if (response.ok) {
-            showAlertModal("SUCCESS: YOUR MESSAGE HAS BEEN SENT", "Thank you for the message. Can't wait to chat!");
+            showAlertModal("SUCCESS: MESSAGE WAS SENT", "Thank you for the message. Can't wait to chat!");
             console.log("Form submitted successfully.");
             
             if (event) {
                 event.target.reset();
             }
         } else {
-            showAlertModal("ERROR: YOUR MESSAGE CANNOT BE SENT", "Please try again later or contact me directly at <a href='mailto:joegutman.dev@gmail.com'>joegutman.dev@gmail.com</a>");
+            showAlertModal("ERROR: MESSAGE CANNOT BE SENT", "Please try again later or contact me directly at <a href='mailto:joegutman.dev@gmail.com'>joegutman.dev@gmail.com</a>");
             console.log("Error submitting form:", response.status);
         }
 
     } catch (error) {
         console.error("Error submitting form:", error);
-        showAlertModal("Error", "An error occurred while sending your message. <br>Please try again later.");
+        showAlertModal("ERROR: MESSAGE CANNOT BE SENT", "Sorry, an unknown error occured. Please try again later or contact me directly at <a href='mailto:joegutman.dev@gmail.com'>joegutman.dev@gmail.com</a>");
     }
 }
