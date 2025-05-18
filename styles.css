@@ -143,11 +143,11 @@ p.item-description {
 }
 
 .call-to-action h1:nth-child(2) {
-    margin-top: -2.5vw
+  margin-top: clamp(-60px, -4vw, -10px);
 }
 
 .call-to-action h1:nth-child(3) {
-    margin-top: -2.5vw
+  margin-top: clamp(-80px, -6vw, -10px);
 }
 
 .contact-form {
