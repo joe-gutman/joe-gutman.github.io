@@ -273,7 +273,6 @@ p.item-description {
     border-radius: 20px;
     width: 75%;
     max-width: 1000px;
-    max-height: 400px;
     text-align: center;
 }
 
@@ -293,7 +292,7 @@ p.item-description {
 
 .alert-close {
     font-family: 'Nunito';
-    padding: 12px 30px;
+    padding: 12px 30px 0px;
     font-size: clamp(1.5rem, 5vw, 5rem);
     font-weight: 900;
     border: none;
