@@ -359,12 +359,20 @@ p.item-description a {
         width: 80%;
     }   
 
-    text-area {
+    .contact-form textarea {
         font-size: 32px;
     }
 }
 
 @media (max-width: 1000px) {
+    .alert-content {
+        padding: 100px 80px;
+    } 
+
+    .alert-status {
+        font-size: 2.5rem;
+    }
+
     .item-description-container {
         padding: 0 30px;
     }
@@ -389,7 +397,4 @@ p.item-description a {
         font-size: 32px;
     }
 
-    .alert-content {
-        padding: 50px 40px;
-    } 
 }

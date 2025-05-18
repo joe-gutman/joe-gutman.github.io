@@ -19,9 +19,6 @@ async function showAlertModal(statusText, messageText) {
     // Set content
     alertStatus.innerHTML = statusText;
     alertMessage.innerHTML = messageText;
-
-    fitty('.fitty-title');
-
     
     // Handle close
     alertClose.onclick = () => {
@@ -35,6 +32,10 @@ async function showAlertModal(statusText, messageText) {
     };
 
     requestAnimationFrame(() => {
-        alertModal.classList.add('show');
-    });
+        setTimeout(() => {
+            alertModal.classList.add('show');
+            fitty('.fitty-title').forEach(instance => instance.fit());
+            console.log("fitty");
+        }, 100);
+    }, 50);
 }
