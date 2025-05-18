@@ -75,7 +75,7 @@ textarea:-webkit-autofill {
 }
 
 section:first-of-type>.title {
-    margin: clamp(10px, 3vw, 20px) 0 clamp(-5px, 3vw, -20px) 0;
+    margin: clamp(10px, 3vw, 20px) 0 clamp(0px, -3vw, -25px) 0;
 }
 
 .title {
@@ -116,7 +116,7 @@ section:first-of-type>.title {
 .item-description-container.visible {
     max-height: 1000px;
     opacity: 1;
-    padding: clamp(10px, 4vw, 40px) clamp(10px, 4vw, 45px) clamp(15px, 4vw, 45px);
+    padding: clamp(5px, 2vw, 30px) clamp(10px, 4vw, 45px) clamp(15px, 4vw, 45px);
 }
 
 .section-item:last-of-type .item-description-container.visible {
