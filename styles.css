@@ -1,478 +1,271 @@
-/* html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-} */
-
 @font-face {
-    font-family: 'Nunito';
-    src: url('../../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 900;
+  font-family: 'Nunito';
+  src: url('../../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 900;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #9EBBE8;
+}
+
+h1, h2 {
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+  color: #9EBBE8;
+  cursor: default;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .fitty-text {
-    white-space: normal !important;
-    display: block !important;
+  white-space: normal !important;
+  display: block !important;
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
   box-shadow: 0 0 0 1000px #EAEAEA inset;
-  -webkit-text-fill-color: #000; /* optional: fixes color override */
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  font-family: 'Nunito'; 
-  font-size: 32px;
-}
-
-h1, h2 {
-    padding: 0;
-    margin: 0;
-}
-
-h1 {
-    color: #9EBBE8;
-    font-weight: 900;
-    cursor: default;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-body {
-    font-family: 'Nunito';
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    background-color: #9EBBE8;
+  -webkit-text-fill-color: #000;
 }
 
 .full-container {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
 .background-pattern {
-    width: 100%;
-    height: 100%;
-    background-image: url('./assets/background_pattern/nubs/nubs_pattern.svg');
-    background-repeat: repeat;
-    background-size: auto 25%;
-    background-position: 0 0;
-    opacity: .5;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/background_pattern/nubs/nubs_pattern.svg');
+  background-repeat: repeat;
+  background-size: auto 25%;
+  background-position: 0 0;
+  opacity: 0.5;
 }
 
 .content-container {
-    position: relative;
-    max-width: 1200px;
-    background-color: white;
-    margin: 0 auto;
-    padding: 0 50px 100px;
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 50px) clamp(50px, 10vw, 100px);
 }
 
 .section-title {
-    cursor: default;
+  cursor: default;
 }
 
 section:first-of-type > .title {
-    margin: 20px 0 -20px 0;
+  margin: clamp(10px, 3vw, 20px) 0 clamp(-5px, 3vw, -20px) 0;
 }
 
-.title:not(first-of-type) {
-    margin: 50px 0 15px 0;
-}
-
-
-.section-title:first-of-type {
-    margin: 0 0 25px 0;
+.title {
+  margin: clamp(5px, 3vw, 15px) 0 15px 0;
 }
 
 .section-item {
-    color: #2C4A6E;
-    padding-left: 8px;
+  color: #2C4A6E;
+  padding-left: 8px;
 }
 
-.item-title{
-    color: #2C4A6E;
-    font-family: 'Nunito';
-    background-color: none;
-    border-radius: none;
-    border: none;
-    font-size: 5rem;
+.item-title {
+  color: #2C4A6E;
+  font-family: 'Nunito';
+  font-size: clamp(1.25rem, 6vw, 5rem);
+  border: none;
+  border-radius: 0;
 }
 
 .item-title:hover {
-    color: #FAA548;
-    cursor: pointer;
+  color: #FAA548;
 }
 
 .item-description-container {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 45px;
-    margin: 0;
-    opacity: 0;
-    transition: 
-        padding 1s cubic-bezier(0.25, 0.1, 0.25, 1),
-        max-height 1s cubic-bezier(0.25, 0.1, 0.25, 1),
-        opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 clamp(15px, 5vw, 45px);
+  margin: 0;
+  opacity: 0;
+  transition: 
+    padding 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+    max-height 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .item-description-container.visible {
-    max-height: 1000px;
-    opacity: 1;
-    padding: 40px 45px 45px;
+  max-height: 1000px;
+  opacity: 1;
+  padding: clamp(10px, 4vw, 40px) clamp(10px, 4vw, 45px) clamp(15px, 4vw, 45px);
 }
 
 .section-item:last-of-type .item-description-container.visible {
-    padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 p.item-description {
-    margin: 0;
-    padding: 0;
-    font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
-p.item-description a {
-    color: #FAA548;
-    cursor: pointer;
-    text-decoration: none;
-    float: right;
-    padding-right: 15px;
-}
-
-.section-item .item-description a {
-    padding: 45px 0 0 0;
-}
-
-.section-item:last-of-type .item-description a {
-    padding: 45px 0 0;
+.item-description a {
+  color: #FAA548;
+  text-decoration: none;
+  float: right;
+  padding-right: 15px;
 }
 
 .call-to-action {
-    margin-top: 5px;
+  margin-top: 5px;
 }
-  
+
 .call-to-action h1:nth-child(2) {
-    margin-top: -40px;
+  margin-top: -3vw;
 }
-  
+
 .call-to-action h1:nth-child(3) {
-    margin-top: -60px;
+  margin-top: -6vw;
 }
-  
+
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: clamp(10px, 2vw, 20px);
 }
 
 .input-wrapper {
-    width: 100%;
-    padding: 0 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 0 clamp(5px, 2vw, 10px);
 }
 
 .input-wrapper label {
-    font-size: 5rem;
-    margin: 10px 0;
-    color: #2C4A6E;
-    display: block;
-    padding-left: 10px;
+  font-size: clamp(1.5rem, 4vw, 5rem);
+  color: #2C4A6E;
+  padding-left: 10px;
 }
 
 .input-wrapper input,
 .input-wrapper textarea {
-    width: 100%;
-    height: 70px;
-    border: 0;
-    background-color: #EAEAEA;
-    font-size: 2rem;
-    padding: 0 0 0 25px;
-    outline: none;
-    border-radius: 35px;
-    box-sizing: border-box;
+  width: 100%;
+  font-size: clamp(1rem, 3vw, 2rem);
+  padding: 15px 25px;
+  background-color: #EAEAEA;
+  border: 0;
+  border-radius: clamp(20px, 6vw, 35px);
+  outline: none;
+  resize: none;
+  font-family: 'Nunito', sans-serif;
 }
 
 .input-wrapper input {
-    margin-top: 5px;
+  height: clamp(40px, 8vw, 70px);
 }
 
 .input-wrapper textarea {
-    height: 500px;
-    padding: 25px;
-    resize: none;
-    font-family: 'Nunito', sans-serif;
-    margin-top: 5px;
+  height: clamp(200px, 50vh, 500px);
 }
 
-.input-wrapper input::placeholder,
-.input-wrapper textarea::placeholder {
-    opacity: 0.5;
-}
-
-.contact-form textarea {
-    font-family: 'Nunito', sans-serif;
-    box-sizing: border-box;
-    width: 100%;
-    height: 500px;
-    border-radius: 35px;
-    border: 0;
-    background-color: #EAEAEA;
-    margin: 10px 20px 10px 0;
-    font-size: 32px;
-    padding: 25px;
-    resize: none;
-    outline: none;
+::placeholder {
+  opacity: 0.5;
 }
 
 .submit-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
-.submit-message,
 .submit-button {
-    width: auto;
-    margin: 10px 0;
-    font-size: 5rem;
-}
-
-
-.submit-button {
-    width: auto;
-    height: 70px;
-    float: right;
-    margin: 10px 0;
-    padding: 0 5px;
-    cursor: pointer;
-    font-family: 'Nunito';
-    font-size: clamp(3rem, 5vw, 5rem);
-    background: none;
-    outline: none;
-    border: none; 
-    border-radius: 0;
-    color: #2C4A6E;
+  font-family: 'Nunito';
+  font-size: clamp(1.5rem, 5vw, 5rem);
+  float: right;
+  padding: 10px 5px;
+  height: 70px;
+  cursor: pointer;
+  color: #2C4A6E;
+  background: none;
+  border: none;
 }
 
 .submit-button:hover {
-    color: #FAA548;
+  color: #FAA548;
 }
 
 .alert-modal {
-    font-family: 'Nunito';
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  font-family: 'Nunito';
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .alert-modal.show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .alert-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 80px 80px 50px;
-    border-radius: 20px;
-    width: 75%;
-    max-height: 400px;
-    max-width: 1000px;
-    text-align: center;
+  background-color: #fff;
+  padding: clamp(30px, 8vw, 80px);
+  border-radius: 20px;
+  width: 75%;
+  max-width: 1000px;
+  max-height: 400px;
+  text-align: center;
 }
 
 .alert-text {
-    width: 100%;
-    color: #2C4A6E;
-}
-
-
-.alert-status {
-    font-family: 'Nunito';
+  color: #2C4A6E;
+  width: 100%;
 }
 
 .alert-message {
-    margin: 20px 50px;
-    font-size: 3rem;
+  margin: clamp(10px, 5vw, 20px) clamp(20px, 5vw, 50px);
+  font-size: clamp(1rem, 3vw, 3rem);
 }
 
 .alert-message a {
-    color: #FAA548;
+  color: #FAA548;
 }
 
 .alert-close {
-    font-family: 'Nunito';
-    padding: 12px 30px;
-    font-size: clamp(1.5rem, 5vw, 5rem);
-    color: #2C4A6E;
-    border: none;
-    font-weight: 900;
-    border-radius: 10px;
-    cursor: pointer;
+  font-family: 'Nunito';
+  padding: 12px 30px;
+  font-size: clamp(1.5rem, 5vw, 5rem);
+  font-weight: 900;
+  border: none;
+  border-radius: 10px;
+  color: #2C4A6E;
+  cursor: pointer;
 }
 
 .alert-close:hover {
-    color: #FAA548;
-}
-
-@media (max-width: 500px) {
-    .content-container {
-        box-sizing: border-box;
-        padding: 0 30px 50px 30px;
-        max-width: 100%;
-    }
-
-    .title:not(first-of-type) {
-        margin: 3vw 0 0 0;
-    }
-
-    
-    .item-title:hover,
-    .item-title:active,
-    .item-title:focus {
-        color: #FAA548;
-    }
-
-    .section-title:first-of-type {
-        margin-bottom: 10px;
-    }
-
-    .item-title {
-        font-size: 1.6rem;
-    }
-
-    .item-description-container {
-        padding: 0 20px;
-    }
-
-    .item-description-container.visible {
-        padding: 10px 20px;
-    }
-
-    .section-item .item-description a {
-        padding: 15px 0 0 0;
-    }
-
-    .section-item:last-of-type .item-description a {
-        padding: 15px 0 0 0;
-    }
-
-    .call-to-action {
-        margin-top: 5px;
-    }
-    
-    .call-to-action h1:nth-child(2) {
-        margin-top: -10px;
-    }
-    
-    .call-to-action h1:nth-child(3) {
-        margin-top: -15px;
-    }
-
-    .contact-form label {
-        font-size: 1.6rem;
-        margin: 0 0 5px;
-    }
-
-    .contact-form label {
-        font-size: 1.6rem;
-        margin: 0 0 5px;
-    }
-    
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-        font-size: 1.3rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        border-radius: 20px;
-    }
-
-    .input-wrapper {
-        padding: 0;
-        margin: 10px 0 0 0;
-    }
-
-    .contact-form input {
-        height: 40px;
-        padding: 0 15px;
-    }
-
-    .submit-button {
-        font-size: 1.5rem;
-        margin: 0 0;
-    }
- 
-    .submit-button:hover,
-    .submit-button:active,
-    .submit-button:focus {
-        color: #FAA548;
-    }
-
-    .contact-form textarea {
-        padding: 15px 15px;
-    }
-
-    .alert-content {
-        box-sizing: border-box;
-        width: 80%;
-        padding: 30px 30px 18px 30px;
-    }   
-
-    .alert-text {
-        margin: 0 auto;
-    }
-
-    .alert-message {
-        font-size: 1rem;
-        padding: 15px 0;
-        margin: 0;
-    }
-
-    .alert-close {
-        font-size: 1.25rem;
-        cursor: pointer;
-        padding-top: 5px;
-    }
-
-    .alert-close:active,
-    .alert-close:hover,
-    .alert-close:focus {
-        color:#FAA548
-    }
-
-
+  color: #FAA548;
 }
