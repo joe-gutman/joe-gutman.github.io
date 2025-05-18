@@ -380,4 +380,8 @@ p.item-description a {
     .contact-form textarea {
         font-size: 32px;
     }
+
+    .alert-content {
+        padding: 50px 40px;
+    } 
 }
