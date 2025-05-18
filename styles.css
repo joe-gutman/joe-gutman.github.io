@@ -365,6 +365,10 @@ p.item-description a {
 }
 
 @media (max-width: 1000px) {
+    .item-description-container {
+        padding: 0 30px;
+    }
+
     .item-description-container.visible {
         padding: 20px 30px;
     }
