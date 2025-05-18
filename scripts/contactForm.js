@@ -4,12 +4,21 @@ async function submitForm(event) {
     const form = event.target;
     let isValid = true;
 
+    const width = window.innerWidth;
+    let borderWidth = 0
+
+    if (width <= 800) {
+        borderWidth = 3;
+    } else {
+        borderWidth = 6;
+    }
+
     const requiredFields = form.querySelectorAll("[required]");
     let missingFields = [];
     requiredFields.forEach(field => {
         if (!field.value.trim()) {
             missingFields.push(field.name);
-            field.style.boxShadow = "inset 0 0 0 5px #FAA548";
+            field.style.boxShadow = `inset 0 0 0 ${borderWidth}px #FAA548`;
             isValid = false;
         } else {
             field.style.border = "";

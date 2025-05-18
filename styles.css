@@ -333,7 +333,7 @@ p.item-description a {
 .alert-close {
     font-family: 'Nunito';
     padding: 12px 30px;
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(1.5rem, 5vw, 5rem);
     color: #2C4A6E;
     border: none;
     font-weight: 900;
@@ -345,9 +345,10 @@ p.item-description a {
     color: #FAA548;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 500px) {
     .content-container {
         box-sizing: border-box;
+        padding: 0 30px 50px 30px;
         max-width: 100%;
     }
 
@@ -355,35 +356,35 @@ p.item-description a {
         margin: 3vw 0 0 0;
     }
 
-    .item-title,
-    .input-wrapper label {
-        font-size: clamp(2rem, 6vw, 5rem);
+    
+    .item-title:hover,
+    .item-title:active,
+    .item-title:focus {
+        color: #FAA548;
     }
 
-    .alert-modal-container {
-        width: 80%;
-    }   
-
-    .contact-form textarea {
-        font-size: 32px;
+    .section-title:first-of-type {
+        margin-bottom: 10px;
     }
-}
 
-@media (max-width: 1000px) {
-    .alert-content {
-        padding: 100px 80px;
-    } 
-
-    .alert-status {
-        font-size: 2.5rem;
+    .item-title {
+        font-size: 1.6rem;
     }
 
     .item-description-container {
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .item-description-container.visible {
-        padding: 20px 30px;
+        padding: 10px 20px;
+    }
+
+    .section-item .item-description a {
+        padding: 15px 0 0 0;
+    }
+
+    .section-item:last-of-type .item-description a {
+        padding: 15px 0 0 0;
     }
 
     .call-to-action {
@@ -391,15 +392,87 @@ p.item-description a {
     }
     
     .call-to-action h1:nth-child(2) {
-        margin-top: -20px;
+        margin-top: -10px;
     }
     
     .call-to-action h1:nth-child(3) {
-        margin-top: -30px;
+        margin-top: -15px;
+    }
+
+    .contact-form label {
+        font-size: 1.6rem;
+        margin: 0 0 5px;
+    }
+
+    .contact-form label {
+        font-size: 1.6rem;
+        margin: 0 0 5px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        font-size: 1.3rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        border-radius: 20px;
+    }
+
+    .input-wrapper {
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
+
+    .contact-form input {
+        height: 40px;
+        padding: 0 15px;
+    }
+
+    .submit-button {
+        font-size: 1.5rem;
+        margin: 0 0;
+    }
+ 
+    .submit-button:hover,
+    .submit-button:active,
+    .submit-button:focus {
+        color: #FAA548;
     }
 
     .contact-form textarea {
-        font-size: 32px;
+        padding: 15px 15px;
     }
+
+    .alert-content {
+        box-sizing: border-box;
+        width: 80%;
+        padding: 30px 30px 18px 30px;
+    }   
+
+    .alert-text {
+        margin: 0 auto;
+    }
+
+    .alert-message {
+        font-size: 1rem;
+        padding: 15px 0;
+        margin: 0;
+    }
+
+    .alert-close {
+        font-size: 1.25rem;
+        cursor: pointer;
+        padding-top: 5px;
+    }
+
+    .alert-close:active,
+    .alert-close:hover,
+    .alert-close:focus {
+        color:#FAA548
+    }
+
 
 }

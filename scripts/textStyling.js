@@ -6,8 +6,8 @@ function getMaxSize() {
   const width = window.innerWidth;
 
   if (width >= 1100) return rem(3);     // large screens
-  if (width >= 768)  return rem(2.25);     // tablets
-  return rem(2);                        // small/mobile
+  if (width >= 768)  return rem(2);     // tablets
+  return rem(1.25);                        // small/mobile
 }
 
 async function initializeFitty() {
